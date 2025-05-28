@@ -1,11 +1,135 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
+import Layout from "../layouts/Layout.astro";
+import H1 from "../components/H1.astro";
+import ProfileImage from "../components/ProfileImage.astro";
 
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
 // Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
 
 <Layout>
-	<Welcome />
+  <div class="container mx-auto p-4 md:p-8 text-center">
+    <H1 text="Welcome to my Portfolio" />
+    <div class="mb-8">
+      <ProfileImage />
+      <p class="mt-4 text-lg">
+        My name is Abdulhamid Abdullahi Sulaiman, a final year Software
+        Engineering Student at the time of writing this. I am passionate about
+        creating responsive and interactive web apps. Let’s connect and build
+        something great together! 🎉😊
+      </p>
+
+      <section id="technologies" aria-label="Technologies I Know">
+        <div class="mt-8 flex flex-col items-center">
+          <H1 text="Technologies I Know" />
+          <div class="grid grid-cols-2 sm:grid-cols-3 gap-4">
+            <div class="grid grid-cols-1 items-center justify-items-center">
+              <img
+                src="/svg/html.svg"
+                alt="HTML5"
+                class="w-16 h-16 mb-2 hover:w-20 hover:h-20 transition-all duration-300 ease-in-out"
+              />
+              <span>HTML5</span>
+            </div>
+            <div class="grid grid-cols-1 items-center justify-items-center">
+              <img
+                src="/svg/css.svg"
+                alt="CSS3"
+                class="w-16 h-16 mb-2 hover:w-20 hover:h-20 transition-all duration-300 ease-in-out"
+              />
+              <span>CSS3</span>
+            </div>
+            <div class="grid grid-cols-1 items-center justify-items-center">
+              <img
+                src="/svg/java-script.svg"
+                alt="JavaScript"
+                class="w-16 h-16 mb-2 hover:w-20 hover:h-20 transition-all duration-300 ease-in-out"
+              />
+              <span>JavaScript</span>
+            </div>
+            <div class="grid grid-cols-1 items-center justify-items-center">
+              <img
+                src="/svg/react.svg"
+                alt="React.js"
+                class="w-16 h-16 mb-2 hover:w-20 hover:h-20 transition-all duration-300 ease-in-out"
+              />
+              <span>React.js</span>
+            </div>
+            <div class="grid grid-cols-1 items-center justify-items-center">
+              <img
+                src="/svg/astro.svg"
+                alt="Astro"
+                class="w-16 h-16 mb-2 hover:w-20 hover:h-20 transition-all duration-300 ease-in-out"
+              />
+              <span>Astro</span>
+            </div>
+            <div class="grid grid-cols-1 items-center justify-items-center">
+              <img
+                src="/svg/tailwind.svg"
+                alt="Tailwind CSS"
+                class="w-16 h-16 mb-2 hover:w-20 hover:h-20 transition-all duration-300 ease-in-out"
+              />
+              <span>Tailwind CSS</span>
+            </div>
+            <div class="grid grid-cols-1 items-center justify-items-center">
+              <img
+                src="/svg/github.svg"
+                alt="Github"
+                class="w-16 h-16 mb-2 hover:w-20 hover:h-20 transition-all duration-300 ease-in-out"
+              />
+              <span>Github</span>
+            </div>
+            <div class="grid grid-cols-1 items-center justify-items-center">
+              <img
+                src="/svg/node-js.svg"
+                alt="Node.js"
+                class="w-16 h-16 mb-2 hover:w-20 hover:h-20 transition-all duration-300 ease-in-out"
+              />
+              <span>Node.js</span>
+            </div>
+            <div class="grid grid-cols-1 items-center justify-items-center">
+              <img
+                src="/svg/mongodb.svg"
+                alt="MongoDB"
+                class="w-16 h-16 mb-2 hover:w-20 hover:h-20 transition-all duration-300 ease-in-out"
+              />
+              <span>MongoDB</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="offer" aria-label="What I Offer">
+        <div class="mt-20">
+          <H1 text="What I Offer" />
+          <p class="text-lg">
+            I offer a range of services including web development, UI/UX design,
+            and software engineering solutions. My goal is to create
+            user-friendly and efficient applications that meet your needs.
+          </p>
+          <button
+            onclick="window.location.href='/contact'"
+            class="bg-slate-900 text-white hover:bg-slate-800 px-6 py-3 rounded-full mt-4 transition-colors duration-300 font-extrabold"
+            aria-label="Contact Me"
+            title="Contact Me"
+          >
+            Contact Me
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="inline-block w-4 h-4 ml-2"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M5 12h14m0 0l-7-7m7 7l-7 7"></path>
+            </svg>
+          </button>
+        </div>
+      </section>
+    </div>
+  </div>
 </Layout>

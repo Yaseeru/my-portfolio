@@ -1,0 +1,58 @@
+---
+const projects = [
+  {
+    title: "NGO Website",
+    image: "/project-images/Nassdev.png",
+    link: "https://www.nassdev.ng",
+  },
+  {
+    title: "E-Commerce Store",
+    image: "/project-images/ecommerce.png",
+    link: "https://your-ecommerce-url.com",
+  },
+  {
+    title: "Blog Platform",
+    image: "/project-images/blog.png",
+    link: "https://blog-api-pjwj.onrender.com",
+  },
+  {
+    title: "Portfolio Website",
+    image: "/project-images/portfolio.png",
+    link: "https://your-portfolio.com",
+  },
+  {
+    title: "Food Delivery App",
+    image: "/project-images/foodapp.png",
+    link: "https://your-foodapp.com",
+  },
+];
+---
+
+<div
+  class="projects-container justify-items-center grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mb-8"
+>
+  {
+    projects.map((project) => (
+      <div class="card w-60 p-2 bg-gray-200 rounded-xl transform transition-all hover:-translate-y-2 duration-300 shadow-lg hover:shadow-2xl hover:border">
+        <img
+          class="h-40 object-cover rounded-xl"
+          src={project.image}
+          alt={project.title}
+        />
+        <div class="p-2" />
+        <h2 class="font-bold text-lg">{project.title}</h2>
+        <div class="m-2">
+          <a
+            href={project.link}
+            target="_blank"
+            rel="noopener noreferrer"
+            role="button"
+            class="bg-blue-400 px-3 py-1 rounded-md hover:bg-blue-950 hover:text-white"
+          >
+            Visit Website
+          </a>
+        </div>
+      </div>
+    ))
+  }
+</div>
