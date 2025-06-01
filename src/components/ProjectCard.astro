@@ -4,26 +4,33 @@ const projects = [
     title: "NGO Website",
     image: "/project-images/Nassdev.png",
     link: "https://www.nassdev.ng",
+    description:
+      "Responsive website for an NGO using only html, css and javascript, nothing fancy here!",
   },
   {
-    title: "E-Commerce Store",
-    image: "/project-images/e-commerce.png",
-    link: "#",
+    title: "Browser Extension Manager UI",
+    image: "/project-images/browser-extension.png",
+    link: "https://browser-extension-manager-ui-soln.netlify.app/",
+    description:
+      "Browser Extension Manager Challenge by Frontend Mentor. HTML, CSS and JS",
   },
   {
     title: "Blog Platform",
     image: "/project-images/blog.png",
     link: "https://blog-api-pjwj.onrender.com",
+    description: "A simple Blog website using nodejs mongodb and express.",
   },
   {
     title: "Portfolio Website",
     image: "/project-images/portfolio.png",
     link: "https://abdulhamidsportfolio.netlify.app",
+    description: "My porfolio website where i showcase my skills.",
   },
   {
     title: "Food Delivery App",
     image: "/project-images/food-app.png",
     link: "#",
+    description: "Food Delivery App",
   },
 ];
 ---
@@ -41,7 +48,8 @@ const projects = [
         />
         <div class="p-2" />
         <h2 class="font-bold text-lg">{project.title}</h2>
-        <div class="m-2">
+        <p class="text-sm mt-1 mb-1">{project.description}</p>
+        <div class="mt-2">
           <a
             href={project.link}
             target="_blank"
